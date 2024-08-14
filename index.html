@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Frontend Mentor | Tip calculator app</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<main class="min-vh-100 d-lg-flex align-items-center justify-content-center flex-column">
+			<div class="text-center">
+				<img class="my-5 mt-lg-0" src="images/logo.svg" alt="Logo">
+			</div>
+			<div class="container">
+				<div class="box mx-auto rounded-4 p-4 p-lg-5 bg-white">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="bill mb-4">
+								<div class="mb-2">
+									<div class="title">Bill</div>
+								</div>
+								<div class="input-wrapper position-relative">
+									<img class="position-absolute top-50 translate-middle-y ms-3" src="images/icon-dollar.svg" alt="USD">
+									<input id="bill-input" class="text-end fs-24 py-2 px-3 border-0 rounded-1 w-100" type="text" placeholder="0">
+								</div>
+							</div>
+							<div class="tip-percent mb-4">
+								<div class="title mb-2">Select tip %</div>
+								<div class="row row-gap-3 gx-3">
+									<div class="col-6 col-lg-4">
+										<div class="text-center rounded-1 p-2 fs-24" data-percent="0.05">5%</div>
+									</div>
+									<div class="col-6 col-lg-4">
+										<div class="text-center rounded-1 p-2 fs-24" data-percent="0.1">10%</div>
+									</div>
+									<div class="col-6 col-lg-4">
+										<div class="text-center rounded-1 p-2 fs-24" data-percent="0.15">15%</div>
+									</div>
+									<div class="col-6 col-lg-4">
+										<div class="text-center rounded-1 p-2 fs-24" data-percent="0.25">25%</div>
+									</div>
+									<div class="col-6 col-lg-4">
+										<div class="text-center rounded-1 p-2 fs-24" data-percent="0.50">50%</div>
+									</div>
+									<div class="col-6 col-lg-4">
+										<input id="percentage-input" class="text-end rounded-1 py-2 px-3 w-100 fs-24 focus-ring shadow-none border-0" type="text" placeholder="Custom">
+									</div>
+								</div>
+							</div>
+							<div class="people mb-4">
+								<div class="mb-2 d-flex align-items-center justify-content-between">
+									<div class="title">Number of People</div>
+									<div id="error-people" class="error text-end">error</div>
+								</div>
+								<div class="input-wrapper position-relative">
+									<img class="position-absolute top-50 translate-middle-y ms-3" src="images/icon-person.svg">
+									<input id="people-input" value="1" class="text-end fs-24 focus-ring py-2 px-3 shadow-none border-0 rounded-1 w-100" type="text" placeholder="0">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="h-100">
+								<div class="display d-flex flex-column h-100 rounded-4 p-4 p-lg-5">
+									<div class="mb-3 d-flex align-items-center justify-content-between">
+										<div>
+											<div class="text-white">Tip Amount</div>
+											<div class="capita">/ person</div>
+										</div>
+										<div id="amount" class="tip fs-1">&dollar;0.00</div>
+									</div>
+									<div class="mb-3 d-flex align-items-center justify-content-between">
+										<div>
+											<div class="text-white">Total</div>
+											<div class="capita">/ person</div>
+										</div>
+										<div id="total" class="tip fs-1">&dollar;0.00</div>
+									</div>
+									<div class="h-auto flex-grow-1 d-flex align-items-end">
+										<button disabled id="reset-btn" class="w-100 text-center text-uppercase p-2 fs-24 border-0 rounded-1">Reset</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

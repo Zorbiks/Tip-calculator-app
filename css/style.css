@@ -1,0 +1,90 @@
+/* Fonts */
+@font-face {
+	font-family: 'Space Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/space-mono@latest/latin-700-normal.woff2) format('woff2');
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+
+/*Colors*/
+:root {
+	/*Primary*/
+	--strong-cyan: hsl(172, 67%, 45%);
+	--red: hsl(0, 60%, 65%);
+
+	/*Neutral*/
+	--very-dark-cyan: hsl(183, 100%, 15%);
+	--dark-grayish-cyan: hsl(186, 14%, 43%);
+	--grayish-cyan: hsl(184, 14%, 56%);
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	font-family: 'Space Mono', monospace;
+	background-color: var(--light-grayish-cyan);
+}
+.box {
+	box-shadow: 0 64px 128px -64px var(--grayish-cyan);
+	max-width: 936px;
+}
+input {
+	background-color: var(--very-light-grayish-cyan);
+}
+input:focus {
+	outline: 2px solid var(--very-dark-cyan) !important;
+}
+
+.title {
+	color: var(--dark-grayish-cyan);
+}
+.error {
+	font-size: 14px;
+	color: var(--red);
+	visibility: hidden;
+}
+.error.active {
+	visibility: visible;
+}
+
+div[data-percent] {
+	background-color: var(--very-dark-cyan);
+	cursor: pointer;
+	color: var(--white);
+}
+div[data-percent].active:hover,
+div[data-percent].active {
+	background-color: var(--strong-cyan);
+	color: var(--very-dark-cyan);
+}
+div[data-percent]:hover {
+	background-color: var(--light-grayish-cyan);
+	color: var(--very-dark-cyan);
+}
+.display {
+	background-color: var(--very-dark-cyan);
+}
+.display .capita {
+	color: var(--grayish-cyan);
+	font-size: 14px;
+}
+
+.tip {
+	color: var(--strong-cyan);
+}
+
+button {
+	color: var(--very-dark-cyan);
+	background-color: var(--strong-cyan);
+}
+button:disabled {
+	background-color: var(--dark-grayish-cyan);
+}
+
+.fs-24 {
+	font-size: 24px;
+}
